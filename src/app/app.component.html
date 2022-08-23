@@ -1,4 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<input type="text" [(ngModel)]="person.name" />
+<input type="text" [(ngModel)]="person.lastName" />
+<input type="text" [(ngModel)]="person.age" />
+<button (click)="savePerson()">Save</button>
+<button (click)="cleanList()">clean</button>
+
+<ul *ngFor="let item of personList">
+  <li>{{ item.name }} {{ item.lastName }} {{ item.age }}</li>
+</ul>
